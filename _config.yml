@@ -29,7 +29,7 @@ features:
     fontawesome_icon_name: sync
 
   - title: Coyotetime
-    description: The player has two jumps, always. Try run off a cliff - still both jumps to use! This is called coyotetime. It makes movement more dynamic.
+    description: <strong>The</strong> player has two jumps, always. Try run off a cliff - still both jumps to use! This is called coyotetime. It makes movement more dynamic.
     fontawesome_icon_name: star
 
   - title: # New Feature Title
