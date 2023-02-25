@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<base target="_blank">
+
+	<title class="pageTitle"></title>
+	<meta name="description" content="">
+
+	<link rel="shortcut icon" href="">
+
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <div class="imageWrapper">
+                <div class="container">
+                    <header>
+<!-- clean header-->
+</header>
+                    <!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>LetsURP</title>
+	<style>
+		html,
+		body {
+			background: white;
+			width: 100%;
+			height: 100%;
+			overflow: visible;
+			align-items: center;
+		}
+		
+
+		div#gameContainer {
+			background: transparent !important;
+			margin: auto;
+		}
+
+
+
+		div#gameContainer canvas[data-pixel-art="true"] {
+			image-rendering: optimizeSpeed;
+			image-rendering: -webkit-crisp-edges;
+			image-rendering: -moz-crisp-edges;
+			image-rendering: -o-crisp-edges;
+			image-rendering: crisp-edges;
+			image-rendering: -webkit-optimize-contrast;
+			image-rendering: optimize-contrast;
+			image-rendering: pixelated;
+			-ms-interpolation-mode: nearest-neighbor;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="gameContainer">
+		<canvas id="unity-canvas" data-pixel-art="true"></canvas>
+		<script src="assets/unity/letsdothis/Build/UrpWIPUpdatedWebGL.loader.js"></script>
+		<script>
+			
+			var canvas = document.querySelector("#unity-canvas");
+			var config = {
+				dataUrl: "assets/unity/letsdothis/Build/UrpWIPUpdatedWebGL.data",
+				frameworkUrl: "assets/unity/letsdothis/Build/UrpWIPUpdatedWebGL.framework.js",
+				codeUrl: "assets/unity/letsdothis/Build/UrpWIPUpdatedWebGL.wasm",
+				streamingAssetsUrl: "StreamingAssets",
+				companyName: "DefaultCompany",
+				productName: "LetsURP",
+				productVersion: "1.0",
+			};
+			var scaleToFit;
+			try {
+				scaleToFit = !!JSON.parse("true");
+			} catch (e) {
+				scaleToFit = true;
+			}
+			function progressHandler(progress) {
+				var percent = progress * 100 + '%';
+				canvas.style.background = 'linear-gradient(to right, white, white ' + percent + ', transparent ' + percent + ', transparent) no-repeat center';
+				canvas.style.backgroundSize = '100% 1rem';
+			}
+			function onResize() {
+				var container = canvas.parentElement;
+				var w;
+				var h;
+
+				if (scaleToFit && window.innerWidth < 914) {
+					var r = 576 / 1024;
+					w = window.innerWidth -30;
+					h = 576;
+					} else {
+					w = 1024;
+					h = 576;
+				}
+
+				container.style.width = canvas.style.width = w + "px";
+				container.style.height = canvas.style.height = h + "px";
+				container.style.top = Math.floor((window.innerHeight - h) / 2) + "px";
+				container.style.left = Math.floor((window.innerWidth - w) / 2) + "px";
+			}
+			createUnityInstance(canvas, config, progressHandler).then(function (instance) {
+				canvas = instance.Module.canvas;
+				onResize();
+			});
+			window.addEventListener('resize', onResize);
+			onResize();	
+		</script>
+		<script>
+  window.addEventListener("orientationchange", function() {
+    if (window.orientation !== undefined) {
+      location.reload();
+    }
+  });
+		</script>
+	</div>
+</body>
+
+</html>
+    
+                    
+<div class="features">
+
+    
+
+    
+
+    <div class="feature">
+        <div>
+            <span class="fa-stack fa-1x">
+                <i class="iconBack fas fa-circle fa-stack-2x"></i>
+                <i class="iconTop fas fa-gamepad fa-stack-1x"></i>
+            </span>
+            
+        </div>
+        <div class="featureText">
+            <h3>
+                Movement Controls
+            </h3>
+            <p>
+                Press the Arrowkeys to move. Press Z to Jump. Press Z again to Doublejump! Press Shift to Sprint.
+                <!--Press the Arrowkeys to move. Press Z to Jump. Press Z again to Doublejump! Press Shift to Sprint.-->
+            </p>
+        </div>
+    </div>
+
+    
+    
+    
+
+    
+
+    <div class="feature">
+        <div>
+            <span class="fa-stack fa-1x">
+                <i class="iconBack fas fa-circle fa-stack-2x"></i>
+                <i class="iconTop fas fa-magic fa-stack-1x"></i>
+            </span>
+            
+        </div>
+        <div class="featureText">
+            <h3>
+                View Controls
+            </h3>
+            <p>
+                Press Up Arrow to Gaze Up. Press Down Arrow to Gaze down.
+                <!--Press Up Arrow to Gaze Up. Press Down Arrow to Gaze down.-->
+            </p>
+        </div>
+    </div>
+
+    
+    
+    
+
+    
+
+    <div class="feature">
+        <div>
+            <span class="fa-stack fa-1x">
+                <i class="iconBack fas fa-circle fa-stack-2x"></i>
+                <i class="iconTop fas fa-play-circle fa-stack-1x"></i>
+            </span>
+            
+        </div>
+        <div class="featureText">
+            <h3>
+                Grab a Ladder!
+            </h3>
+            <p>
+                Up Arrow grabs a ladder, Jump or pressing down exits a ladder. <strong>Dexterity challenge!</strong> Try to jump from one ladder to another without touching the ground!
+                <!--Up Arrow grabs a ladder, Jump or pressing down exits a ladder. <strong>Dexterity challenge!</strong> Try to jump from one ladder to another without touching the ground!-->
+            </p>
+        </div>
+    </div>
+
+    
+    
+    
+
+    
+
+    <div class="feature">
+        <div>
+            <span class="fa-stack fa-1x">
+                <i class="iconBack fas fa-circle fa-stack-2x"></i>
+                <i class="iconTop fas fa-sync fa-stack-1x"></i>
+            </span>
+            
+        </div>
+        <div class="featureText">
+            <h3>
+                Dynamic Camera
+            </h3>
+            <p>
+                High up on the poles, the camera turns into a wide scenic view. Try to climb the highest pole and gaze down!
+                <!--High up on the poles, the camera turns into a wide scenic view. Try to climb the highest pole and gaze down!-->
+            </p>
+        </div>
+    </div>
+
+    
+    
+    
+
+    
+
+    <div class="feature">
+        <div>
+            <span class="fa-stack fa-1x">
+                <i class="iconBack fas fa-circle fa-stack-2x"></i>
+                <i class="iconTop fas fa-star fa-stack-1x"></i>
+            </span>
+            
+        </div>
+        <div class="featureText">
+            <h3>
+                Coyotetime
+            </h3>
+            <p>
+                The player has two jumps, always. Try run off a cliff - still both jumps to use! This is called coyotetime. It makes movement more dynamic.
+                <!--The player has two jumps, always. Try run off a cliff - still both jumps to use! This is called coyotetime. It makes movement more dynamic.-->
+            </p>
+        </div>
+    </div>
+
+    
+    
+    
+
+    
+    
+    
+    
+</div>
+                    <!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark-dimmed.min.css">
+<body>
+    <div class="codeContainer">
+        <div class="codeLogo">
+            <img src="assets/c-sharp.png" alt="C# logo">
+        </div>
+        <div class="codeDescription">
+            Game Making in the Unity Engine requires quite a bit of coding. This little practice project has 400 lines of C# code. 
+            <br></br>
+            For example: here is the code for moving the player, checking if the player has movement, and activating the running animation at the appropriate time. 
+        </div>
+        <div>
+        <pre class="highlightedCode">
+        <code class="code">
+myRigidbody.velocity = new Vector2(moveInput.x * runSpeed, myRigidbody.velocity.y);
+
+isRunning = (Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon);
+
+myAnimator.SetBool("isRunning", isRunning);
+        </code>
+        </pre>
+        <button type="button" class="btn btn-primary copy-code-button">Copy code</button>
+        <div class="linkToGitHub">
+            The PlayerScript can be seen in Github at: <a href="https://github.com/opafin/practicegit">https://github.com/opafin</a>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+        const copyCodeButton = document.querySelector('.copy-code-button');
+        const codeElement = document.querySelector('code');
+        copyCodeButton.addEventListener('click', () => {
+        navigator.clipboard.writeText(codeElement.innerText);
+        });
+    </script>
+    </div>
+</body>
+</html>
+                </div>
+                <footer>
+	
+	<p class="footerText">Made by opafin</p>
+	
+	<div class="footerIcons">
+
+		
+
+		
+
+		
+
+		
+			<a href="https://github.com/opafin">
+				<span class="fa-stack fa-1x">
+					<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
+					<i class="socialIconTop fab fa-github fa-stack-1x"></i>
+				</span>
+			</a>
+		
+
+		
+			<a href="mailto:opalantela@gmail.com">
+				<span class="fa-stack fa-1x">
+					<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
+					<i class="socialIconTop fas fa-envelope fa-stack-1x"></i>
+				</span>
+			</a>
+		
+
+	</div>
+	</div>
+</footer>
+            </body>
+            </html>

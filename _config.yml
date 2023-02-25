@@ -1,0 +1,83 @@
+#page title
+page_title:
+app_name:
+app_description:
+
+# Information About Yourself
+your_name: opafin
+your_link:
+
+email_address: opalantela@gmail.com
+github_username: opafin
+
+# Feature List                            Edit, add or remove features to be presented.
+features:
+  - title: Movement Controls
+    description: Press the Arrowkeys to move. Press Z to Jump. Press Z again to Doublejump! Press Shift to Sprint.
+    fontawesome_icon_name: gamepad
+
+  - title: View Controls
+    description: Press Up Arrow to Gaze Up. Press Down Arrow to Gaze down.
+    fontawesome_icon_name: magic
+
+  - title: Grab a Ladder!
+    description: Up Arrow grabs a ladder, Jump or pressing down exits a ladder. <strong>Dexterity challenge!</strong> Try to jump from one ladder to another without touching the ground!
+    fontawesome_icon_name: play-circle
+
+  - title: Dynamic Camera
+    description: High up on the poles, the camera turns into a wide scenic view. Try to climb the highest pole and gaze down!
+    fontawesome_icon_name: sync
+
+  - title: Coyotetime
+    description: The player has two jumps, always. Try run off a cliff - still both jumps to use! This is called coyotetime. It makes movement more dynamic.
+    fontawesome_icon_name: star
+
+  - title: # New Feature Title
+    description: # New Feature Description
+    fontawesome_icon_name: # Enter Font Awesome icon name (e.g. star). Find icons on fontawesome.com/icons.
+
+# Theme Settings
+topbar_color: "#000000"
+topbar_transparency: 0.1
+topbar_title_color: "#ffffff"
+
+cover_image: assets/headerimage.png # Replace with alternative image path or image URL.
+cover_overlay_color: "#363b3d"
+cover_overlay_transparency: 0.8
+
+body_background_color: "#ffffff"
+
+link_color: "#1d63ea"
+
+feature_title_color: "#000000"
+feature_text_color: "#666666"
+
+feature_icons_foreground_color: "#1d63ea"
+feature_icons_background_color: "#e6e6e6"
+
+social_icons_foreground_color: "#666666"
+social_icons_background_color: "#e6e6e6"
+
+footer_text_color: "#666666"
+
+####################################################
+### Jekyll Configuration. No need to touch this. ###
+####################################################
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :compressed # You might prefer to minify using :compressed
+
+# Exclude these files from your production _site
+exclude:
+  - LICENSE
+  - README.md
+  - CNAME
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# Markdown rendering
+markdown: kramdown

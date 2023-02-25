@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark-dimmed.min.css">
+<body>
+    <div class="codeContainer">
+        <div class="codeLogo">
+            <img src="assets/c-sharp.png" alt="C# logo">
+        </div>
+        <div class="codeDescription">
+            Game Making in the Unity Engine requires quite a bit of coding. This little practice project has 400 lines of C# code. 
+            <br></br>
+            For example: here is the code for moving the player, checking if the player has movement, and activating the running animation at the appropriate time. 
+        </div>
+        <div>
+        <pre class="highlightedCode">
+        <code class="code">
+myRigidbody.velocity = new Vector2(moveInput.x * runSpeed, myRigidbody.velocity.y);
+
+isRunning = (Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon);
+
+myAnimator.SetBool("isRunning", isRunning);
+        </code>
+        </pre>
+        <button type="button" class="btn btn-primary copy-code-button">Copy code</button>
+        <div class="linkToGitHub">
+            The PlayerScript can be seen in Github at: <a href="https://github.com/opafin/practicegit">https://github.com/opafin</a>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+        const copyCodeButton = document.querySelector('.copy-code-button');
+        const codeElement = document.querySelector('code');
+        copyCodeButton.addEventListener('click', () => {
+        navigator.clipboard.writeText(codeElement.innerText);
+        });
+    </script>
+    </div>
+</body>
+</html>
